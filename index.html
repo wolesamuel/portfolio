@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Samuel O. Oyewole - Frontend Dev</title>
+
+<!-- SEO -->
+<title>Samuel Oyewole - Frontend Developer Portfolio</title>
+<meta name="description" content="Samuel Oyewole is a Frontend Developer specializing in HTML, Tailwind CSS, JavaScript. View projects and contact me for web development.">
+<meta name="keywords" content="frontend developer, web developer Nigeria, HTML CSS JavaScript, Tailwind">
+<meta name="author" content="Samuel Oyewole">
+
+<!-- Open Graph for WhatsApp/Twitter/LinkedIn preview -->
+<meta property="og:title" content="Samuel Oyewole - Frontend Developer">
+<meta property="og:description" content="Building fast, responsive websites with HTML, Tailwind & JavaScript">
+<meta property="og:image" content="https://wolesamuel.github.io/portfolio/og-image.png">
+<meta property="og:url" content="https://wolesamuel.github.io/portfolio/">
+<meta name="twitter:card" content="summary_large_image">
+  
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/702bae211a.js" crossorigin="anonymous"></script>
 </head>
@@ -17,6 +34,7 @@
         <button id="menuBtn">
           <i class="fa-solid fa-bars text-4xl text-gray-400"></i>
         </button>
+        <button id="theme-toggle" class="text-2xl">🌙</button>
       </nav>
 
       <div class="text-4xl font-bold text-orange-500">LOGO</div>
@@ -72,7 +90,9 @@
 
         <div class="flex flex-wrap justify-center md:justify-start gap-6 my-4">
           <button id="hireMeHero" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold px-10 py-3 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 active:scale-95">Hire Me</button>
-          <button id="downloadCvHero" class="border-2 border-pink-500 text-pink-500 font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:bg-pink-500 hover:text-white hover:scale-105 active:scale-95">Download CV</button>
+         <a href="resume.pdf">
+          <button id="downloadCvHero" class="border-2 border-pink-500 text-pink-500 font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:bg-pink-500 hover:text-white hover:scale-105 active:scale-95">Download CV</button> 
+        </a>
         </div>
       </div>
 
@@ -137,9 +157,11 @@
         <div>
           <p class="mt-4 md:mt-10 text-xl italic font-semibold">Hey, I’m a frontend developer who loves bringing designs to life. I build the part of your website that users see and interact with clean layouts, smooth animations, mobile-first design. I work with HTML, CSS, JavaScript, React, and Tailwind to make sure everything feels fast and premium. If you need a stunning frontend that loads fast and keeps users engaged, I’m your guy.</p>
           <div class="flex items-center justify-center gap-6">
+             <a href="resume.pdf">
             <button id="downloadCvAbout" class="mt-10 w-80 border-2 border-pink-500 text-pink-500 font-semibold text-2xl px-6 py-3 rounded-lg transition-all duration-200 hover:bg-pink-500 hover:text-white hover:scale-105 active:scale-95">
               <i class="fa fa-download" aria-hidden="true"></i> Download CV
             </button>
+             </a>
           </div>
         </div>
       </div>
@@ -373,6 +395,31 @@
     </footer>
 
   </section>
+
+  <script>
+const btn = document.getElementById('theme-toggle');
+const html = document.documentElement;
+
+// Check saved theme
+if(localStorage.getItem('theme') === 'light') {
+  html.classList.remove('dark');
+  btn.textContent = '🌙';
+} else {
+  html.classList.add('dark');
+  btn.textContent = '☀️';
+}
+
+btn.addEventListener('click', () => {
+  html.classList.toggle('dark');
+  if(html.classList.contains('dark')) {
+    localStorage.setItem('theme', 'dark');
+    btn.textContent = '☀️';
+  } else {
+    localStorage.setItem('theme', 'light');
+    btn.textContent = '🌙';
+  }
+});
+</script>
 
   <script src="portfolio.js"></script>
 </body>
