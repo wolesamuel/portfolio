@@ -1,425 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO -->
-<title>Samuel Oyewole - Frontend Developer Portfolio</title>
-<meta name="description" content="Samuel Oyewole is a Frontend Developer specializing in HTML, Tailwind CSS, JavaScript. View projects and contact me for web development.">
-<meta name="keywords" content="frontend developer, web developer Nigeria, HTML CSS JavaScript, Tailwind">
-<meta name="author" content="Samuel Oyewole">
+  <!-- FAVICON -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
 
-<!-- Open Graph for WhatsApp/Twitter/LinkedIn preview -->
-<meta property="og:title" content="Samuel Oyewole - Frontend Developer">
-<meta property="og:description" content="Building fast, responsive websites with HTML, Tailwind & JavaScript">
-<meta property="og:image" content="https://wolesamuel.github.io/portfolio/og-image.png">
-<meta property="og:url" content="https://wolesamuel.github.io/portfolio/">
-<meta name="twitter:card" content="summary_large_image">
-  
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- SEO -->
+  <title>Samuel Oyewole - Frontend Developer Portfolio</title>
+  <meta name="description" content="Samuel Oyewole is a Frontend Developer specializing in HTML, Tailwind CSS, JavaScript. View projects and contact me for web development.">
+  <meta name="keywords" content="frontend developer, web developer Nigeria, HTML CSS JavaScript, Tailwind">
+  <meta name="author" content="Samuel Oyewole">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Samuel Oyewole - Frontend Developer">
+  <meta property="og:description" content="Building fast, responsive websites with HTML, Tailwind & JavaScript">
+  <meta property="og:image" content="https://wolesamuel.github.io/portfolio/og-image.png">
+  <meta property="og:url" content="https://wolesamuel.github.io/portfolio/">
+  <meta name="twitter:card" content="summary_large_image">
+
+<!-- TAILWIND CONFIG -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { darkMode: 'class' }
+</script>
   <script src="https://kit.fontawesome.com/702bae211a.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="min-h-screen bg-gray-900 text-gray-300 overflow-x-hidden">
+<body class="min-h-screen bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-300 overflow-x-hidden transition-colors duration-300">
 
   <section class="max-w-6xl leading-relaxed mx-auto p-4 md:p-8">
 
-    <div class="sticky top-0 z-40 flex justify-between items-center bg-gray-900/90 backdrop-blur-md py-4 border-b border-gray-800">
+    <!-- NAVBAR - DESKTOP ONLY TOGGLE -->
+    <div class="sticky top-0 z-40 flex justify-between items-center bg-white/90 dark:bg-gray-800/90 backdrop-blur-md py-4 border-b border-gray-200 dark:border-gray-800">
       <nav class="text-3xl md:hidden z-50">
         <button id="menuBtn">
-          <i class="fa-solid fa-bars text-4xl text-gray-400"></i>
+          <i class="fa-solid fa-bars text-4xl text-gray-600 dark:text-gray-400"></i>
         </button>
-        <button id="theme-toggle" class="text-2xl">🌙</button>
       </nav>
 
       <div class="text-4xl font-bold text-orange-500">LOGO</div>
 
       <nav class="hidden md:flex md:flex-row gap-10">
-        <a href="index.html" class="text-xl text-gray-400 font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Home</a>
-        <a href="#services" class="text-xl text-gray-400 font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Services</a>
-        <a href="#about" class="text-xl text-gray-400 font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">About Me</a>
-        <a href="#portfolio" class="text-xl text-gray-400 font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Portfolio</a>
-        <a href="#contact" class="text-xl text-gray-400 font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Contact me</a>
+        <a href="index.html" class="text-xl font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Home</a>
+        <a href="#services" class="text-xl font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Services</a>
+        <a href="#about" class="text-xl font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">About Me</a>
+        <a href="#portfolio" class="text-xl font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Portfolio</a>
+        <a href="#contact" class="text-xl font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Contact me</a>
       </nav>
 
-      <button id="hireMeTop" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 active:scale-95">Hire Me</button>
+      <div class="flex items-center gap-4">
+        <!-- TOGGLE SWITCH - DESKTOP ONLY -->
+        <label class="relative hidden md:inline-flex cursor-pointer">
+          <input type="checkbox" id="theme-toggle" class="sr-only peer">
+          <div class="w-14 h-7 bg-gray-200 dark:bg-gray-700 rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-purple-600"></div>
+        </label>
+
+        <button id="hireMeTop" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 active:scale-95">Hire Me</button>
+      </div>
     </div>
 
-    <!-- MOBILE SIDEBAR - 0.5s transition -->
-    <aside id="menuSidebar" class="fixed top-0 left-0 h-full w-72 bg-gray-900 z-50 pt-16 px-6 md:hidden -translate-x-full opacity-0 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] pointer-events-none">
-      <button id="closeBtn" class="absolute top-4 right-4">
-        <i class="fa-solid fa-xmark text-white text-3xl"></i>
-      </button>
-      <div class="flex flex-col gap-6 mt-12">
-        <a href="index.html" class="text-xl text-gray-400 font-semibold hover:text-purple-400">Home</a>
-        <a href="#services" class="text-xl text-gray-400 font-semibold hover:text-purple-400">Services</a>
-        <a href="#about" class="text-xl text-gray-400 font-semibold hover:text-purple-400">About Me</a>
-        <a href="#portfolio" class="text-xl text-gray-400 font-semibold hover:text-purple-400">Portfolio</a>
-        <a href="#contact" class="text-xl text-gray-400 font-semibold hover:text-purple-400">Contact me</a>
+    <!-- MOBILE SIDEBAR - TOGGLE BESIDE X -->
+    <aside id="menuSidebar" class="fixed top-0 left-0 h-full w-72 bg-white dark:bg-gray-900 z-50 pt-6 px-6 md:hidden -translate-x-full opacity-0 transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] pointer-events-none">
+
+      <!-- TOP ROW: Toggle + Close X -->
+      <div class="flex justify-between items-center mb-8">
+        <!-- MOBILE TOGGLE SWITCH -->
+        <label class="relative inline-flex cursor-pointer">
+          <input type="checkbox" id="theme-toggle-mobile" class="sr-only peer">
+          <div class="w-14 h-7 bg-gray-200 dark:bg-gray-700 rounded-full peer-checked:after:translate-x-full after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all peer-checked:bg-purple-600"></div>
+        </label>
+
+        <button id="closeBtn">
+          <i class="fa-solid fa-xmark text-gray-900 dark:text-white text-3xl"></i>
+        </button>
+      </div>
+
+      <div class="flex flex-col gap-6">
+        <a href="index.html" class="text-xl font-semibold hover:text-purple-400">Home</a>
+        <a href="#services" class="text-xl font-semibold hover:text-purple-400">Services</a>
+        <a href="#about" class="text-xl font-semibold hover:text-purple-400">About Me</a>
+        <a href="#portfolio" class="text-xl font-semibold hover:text-purple-400">Portfolio</a>
+        <a href="#contact" class="text-xl font-semibold hover:text-purple-400">Contact me</a>
       </div>
     </aside>
 
-                                       <!-- HERO SECTION - HOME -->
+    <!-- HERO -->
     <div class="flex flex-col md:flex-row items-center md:items-start gap-12 my-4 transition-all duration-500 ease-out opacity-100 translate-y-0">
       <div class="flex-1 text-center md:text-start max-w-xl">
-        <p class="text-xl font-semibold text-gray-400 py-4">Hi I am</p>
-        <p class="text-2xl md:text-3xl text-gray-300 font-bold pb-4">Samuel O. Oyewole</p>
+        <p class="text-xl font-semibold text-gray-500 dark:text-gray-400 py-4">Hi I am</p>
+        <p class="text-2xl md:text-3xl text-gray-800 dark:text-gray-300 font-bold pb-4">Samuel O. Oyewole</p>
         <h1 class="font-bold text-4xl md:text-6xl bg-gradient-to-r from-purple-600 to-pink-500 text-transparent uppercase bg-clip-text leading-tight">
           FRONTEND DEVELOPER
         </h1>
 
         <div class="flex justify-center md:justify-start gap-6 text-2xl p-2 my-6">
-          <a href="https://github.com/wolesamuel" target="_blank" class="bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 border-gray-700 p-2 rounded-full transition-all">
-            <i class="fa-brands fa-github"></i>
-          </a>
-          <a href="http://www.linkedin.com/in/wolesamuel" target="_blank" class="bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 border-gray-700 p-2 rounded-full transition-all">
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a href="mailto:wolesamuel001@gmail.com" class="bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 border-gray-700 p-2 rounded-full transition-all">
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-          <a href="https://www.instagram.com/wolesamuel4" target="_blank" class="bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 border-gray-700 p-2 rounded-full transition-all">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
+          <a href="https://github.com/wolesamuel" target="_blank" class="bg-gray-200 dark:bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 p-2 rounded-full transition-all"><i class="fa-brands fa-github text-gray-900 dark:text-white"></i></a>
+          <a href="http://www.linkedin.com/in/wolesamuel" target="_blank" class="bg-gray-200 dark:bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 p-2 rounded-full transition-all"><i class="fa-brands fa-linkedin text-gray-900 dark:text-white"></i></a>
+          <a href="mailto:wolesamuel001@gmail.com" class="bg-gray-200 dark:bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 p-2 rounded-full transition-all"><i class="fa-solid fa-envelope text-gray-900 dark:text-white"></i></a>
+          <a href="https://www.instagram.com/wolesamuel4" target="_blank" class="bg-gray-200 dark:bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 p-2 rounded-full transition-all"><i class="fa-brands fa-instagram text-gray-900 dark:text-white"></i></a>
         </div>
 
         <div class="flex flex-wrap justify-center md:justify-start gap-6 my-4">
           <button id="hireMeHero" class="bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold px-10 py-3 rounded-lg transition-all duration-200 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 active:scale-95">Hire Me</button>
-         <a href="resume.pdf">
-          <button id="downloadCvHero" class="border-2 border-pink-500 text-pink-500 font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:bg-pink-500 hover:text-white hover:scale-105 active:scale-95">Download CV</button> 
-        </a>
+          <a href="resume.pdf" download>
+            <button id="downloadCvHero" class="border-2 border-pink-500 text-pink-500 font-semibold px-6 py-3 rounded-lg transition-all duration-200 hover:bg-pink-500 hover:text-white hover:scale-105 active:scale-95">
+              <i class="fa fa-download"></i> 
+              Download CV</button>
+          </a>
         </div>
       </div>
 
-      <div class="flex-shrink-0 w-80 h-80 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center shadow-[0_0_40px_rgba(255,255,255,0.08)]">
+      <div class="flex-shrink-0 w-80 h-80 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 flex items-center justify-center shadow-[0_0_40px_rgba(0,0,0,0.1)] dark:shadow-[0_0_40px_rgba(255,255,255,0.08)]">
         <img src="Coding-profile.jpeg" alt="profile pics" class="w-72 h-72 rounded-full object-cover object-top"/>
       </div>
     </div>
 
-                                          <!-- SERVICES PAGE -->
+                                                        <!-- SERVICES -->
+                                                         
     <div id="services" class="hidden flex-col justify-center items-center flex-wrap my-2 text-center transition-all duration-500 ease-out opacity-0 translate-y-5">
-      <h1 class="text-2xl font-bold pb-8">Services</h1>
-      <p class="text-xl text-gray-300 text-center">I build fast, modern websites that convert visitors into customers.</p>
-
+      <h1 class="text-2xl font-bold pb-8 text-gray-900 dark:text-white">Services</h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300 text-center">I build fast, modern websites that convert visitors into customers.</p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 m-4 py-10">
-        <div class="cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-gray-800/50 border-2 border-gray-700 text-center rounded-xl p-8 shadow-lg">
+        <div class="cursor-pointer hover:scale-105 hover:shadow-lg border-2 border-gray-200 dark:border-gray-700 text-center rounded-xl p-8 shadow-lg bg-white dark:bg-gray-800 transition-colors duration-300">
           <i class="fa-solid fa-mobile-screen text-4xl text-purple-400"></i>
           <p class="text-xl p-4 bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text font-bold">Responsive Web Design</p>
-          <p class="text-lg text-gray-400">Sites that look perfect on phone, tablet, desktop. Mobile-first approach.</p>
+          <p class="text-lg text-gray-600 dark:text-gray-400">Sites that look perfect on phone, tablet, desktop. Mobile-first approach.</p>
         </div>
-
-        <div class="cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-gray-800/50 border-2 border-gray-700 text-center rounded-xl p-8 shadow-lg">
+        <div class="cursor-pointer hover:scale-105 hover:shadow-lg border-2 border-gray-200 dark:border-gray-700 text-center rounded-xl p-8 shadow-lg bg-white dark:bg-gray-800 transition-colors duration-300">
           <i class="fa-solid fa-palette text-3xl text-purple-400"></i>
           <p class="text-xl p-4 bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text font-bold">UI/UX Implementation</p>
-          <p class="text-lg text-gray-400">Turn Figma designs into clean, pixel-perfect React/Tailwind code.</p>
+          <p class="text-lg text-gray-600 dark:text-gray-400">Turn Figma designs into clean, pixel-perfect React/Tailwind code.</p>
         </div>
-
-        <div class="cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-gray-800/50 border-2 border-gray-700 text-center rounded-xl p-8 shadow-lg">
+        <div class="cursor-pointer hover:scale-105 hover:shadow-lg border-2 border-gray-200 dark:border-gray-700 text-center rounded-xl p-8 shadow-lg bg-white dark:bg-gray-800 transition-colors duration-300">
           <i class="fa-solid fa-bolt text-3xl text-purple-400"></i>
           <p class="text-xl px-1 py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text font-bold">Performance Optimization</p>
-          <p class="text-lg text-gray-400">Faster load times, SEO-friendly, Lighthouse 90+ scores. Users stay longer.</p>
+          <p class="text-lg text-gray-600 dark:text-gray-400">Faster load times, SEO-friendly, Lighthouse 90+ scores.</p>
         </div>
-
-        <div class="cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-gray-800/50 border-2 border-gray-700 text-center rounded-xl p-8 shadow-lg">
+        <div class="cursor-pointer hover:scale-105 hover:shadow-lg border-2 border-gray-200 dark:border-gray-700 text-center rounded-xl p-8 shadow-lg bg-white dark:bg-gray-800 transition-colors duration-300">
           <i class="fa-solid fa-wand-magic-sparkles text-3xl text-purple-400"></i>
           <p class="text-xl p-4 bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text font-bold">Interactive Animations</p>
-          <p class="text-lg text-gray-400">Smooth hover effects, scroll animations, micro-interactions with Framer Motion.</p>
+          <p class="text-lg text-gray-600 dark:text-gray-400">Smooth hover effects, scroll animations, micro-interactions.</p>
         </div>
-
-        <div class="cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-gray-800/50 border-2 border-gray-700 text-center rounded-xl p-8 shadow-lg">
+        <div class="cursor-pointer hover:scale-105 hover:shadow-lg border-2 border-gray-200 dark:border-gray-700 text-center rounded-xl p-8 shadow-lg bg-white dark:bg-gray-800 transition-colors duration-300">
           <i class="fa-solid fa-rocket text-3xl text-purple-400"></i>
-          <p class="text-xl py-4 px-2 bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text font-bold">Landing Page Dev.</p>
-          <p class="text-lg text-gray-400">High-converting single pages for products, events, or startups. Fast delivery.</p>
+          <p class="text-xl py-4 px-2 bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text font-bold">Landing Page Dev</p>
+          <p class="text-lg text-gray-600 dark:text-gray-400">High-converting single pages for products, events, startups.</p>
         </div>
-
-        <div class="cursor-pointer hover:scale-105 hover:shadow-lg hover:shadow-gray-800/50 border-2 border-gray-700 text-center rounded-xl p-8 shadow-lg">
+        <div class="cursor-pointer hover:scale-105 hover:shadow-lg border-2 border-gray-200 dark:border-gray-700 text-center rounded-xl p-8 shadow-lg bg-white dark:bg-gray-800 transition-colors duration-300">
           <i class="fa-solid fa-code text-3xl text-purple-400"></i>
           <p class="text-xl py-4 px-2 bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text font-bold">Portfolio/Web App Build</p>
-          <p class="text-lg text-gray-400">Custom React/Next.js apps, dashboards, SPAs. Clean code + API integration.</p>
+          <p class="text-lg text-gray-600 dark:text-gray-400">Custom React/Next.js apps, dashboards, SPAs. Clean code.</p>
         </div>
       </div>
     </div>
 
-                                            <!-- ABOUT ME -->
+                                                             <!-- ABOUT ME-->
+
     <div id="about" class="hidden flex justify-center items-center gap-10 text-center flex-col my-2 transition-all duration-500 ease-out opacity-0 translate-y-5">
-      <p class="text-2xl font-bold mt-6">About Me </p>
-      <p class="text-xl font-bold">Frontend Dev focused on Speed, Design and User Experience.</p>
+      <p class="text-2xl font-bold mt-6 text-gray-900 dark:text-white">About Me</p>
+      <p class="text-xl font-bold text-gray-800 dark:text-gray-200">Frontend Dev focused on Speed, Design and User Experience.</p>
       <div class="md:grid md:grid-cols-2 md:mt-8 gap-10">
-        <div class="relative md:flex-shrink-0 w-[300px] h-[400px] mx-auto bg-zinc-700 rounded-t-[150px] overflow-hidden">
+        <div class="relative md:flex-shrink-0 w-[300px] h-[400px] mx-auto bg-zinc-200 dark:bg-zinc-700 rounded-t-[150px] overflow-hidden transition-colors duration-300">
           <img src="Coding-profile.jpeg" alt="Me" class="w-full h-full object-cover">
         </div>
-
         <div>
-          <p class="mt-4 md:mt-10 text-xl italic font-semibold">Hey, I’m a frontend developer who loves bringing designs to life. I build the part of your website that users see and interact with clean layouts, smooth animations, mobile-first design. I work with HTML, CSS, JavaScript, React, and Tailwind to make sure everything feels fast and premium. If you need a stunning frontend that loads fast and keeps users engaged, I’m your guy.</p>
+          <p class="mt-4 md:mt-10 text-xl italic font-semibold text-gray-700 dark:text-gray-300">Hey, I’m a frontend developer who loves bringing designs to life. I build the part of your website that users see and interact with - clean layouts, smooth animations, mobile-first design. I work with HTML, CSS, JavaScript, React, and Tailwind to make sure everything feels fast and premium.</p>
           <div class="flex items-center justify-center gap-6">
-             <a href="resume.pdf">
-            <button id="downloadCvAbout" class="mt-10 w-80 border-2 border-pink-500 text-pink-500 font-semibold text-2xl px-6 py-3 rounded-lg transition-all duration-200 hover:bg-pink-500 hover:text-white hover:scale-105 active:scale-95">
-              <i class="fa fa-download" aria-hidden="true"></i> Download CV
-            </button>
-             </a>
+            <a href="resume.pdf" download>
+              <button id="downloadCvAbout" class="mt-10 w-80 border-2 border-pink-500 text-pink-500 font-semibold text-2xl px-6 py-3 rounded-lg transition-all duration-200 hover:bg-pink-500 hover:text-white hover:scale-105 active:scale-95">
+                <i class="fa fa-download"></i> Download CV
+              </button>
+            </a>
           </div>
         </div>
       </div>
-
-      <section class="py-8">
-        <div class="flex flex-wrap justify-center gap-12 max-w-4xl mx-auto">
-          <div class="flex flex-col items-center">
-            <div class="relative w-28 h-28">
-              <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="text-zinc-800"/>
-                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" stroke-dasharray="283" stroke-dashoffset="0" stroke-linecap="round" class="text-pink-500"/>
-              </svg>
-              <div class="absolute inset-0 flex items-center justify-center text-2xl font-bold text-pink-500">HTML</div>
-            </div>
-            <p class="mt-3 text-xl font-bold text-zinc-300">HTML5</p>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="relative w-28 h-28">
-              <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="text-zinc-800"/>
-                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" stroke-dasharray="283" stroke-dashoffset="0" stroke-linecap="round" class="text-pink-500"/>
-              </svg>
-              <div class="absolute inset-0 flex items-center justify-center text-2xl font-bold text-pink-500">CSS</div>
-            </div>
-            <p class="mt-3 text-xl font-bold text-zinc-300">CSS3</p>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="relative w-28 h-28">
-              <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="text-zinc-800"/>
-                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" stroke-dasharray="283" stroke-dashoffset="0" stroke-linecap="round" class="text-pink-500"/>
-              </svg>
-              <div class="absolute inset-0 flex items-center justify-center text-3xl font-bold text-pink-500">JS</div>
-            </div>
-            <p class="mt-3 text-xl font-bold text-zinc-300">JavaScript</p>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="relative w-28 h-28">
-              <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="text-zinc-800"/>
-                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" stroke-dasharray="283" stroke-dashoffset="0" stroke-linecap="round" class="text-pink-500"/>
-              </svg>
-              <div class="absolute inset-0 flex items-center justify-center text-3xl font-bold text-pink-500">⚛️</div>
-            </div>
-            <p class="mt-3 text-xl font-bold text-zinc-300">React</p>
-          </div>
-
-          <div class="flex flex-col items-center">
-            <div class="relative w-28 h-28">
-              <svg class="w-full h-full -rotate-90" viewBox="0 0 100 100">
-                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" class="text-zinc-800"/>
-                <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="8" fill="none" stroke-dasharray="283" stroke-dashoffset="0" stroke-linecap="round" class="text-pink-500"/>
-              </svg>
-              <div class="absolute inset-0 flex items-center justify-center text-3xl font-bold">🎨</div>
-            </div>
-            <p class="mt-3 text-xl font-bold text-zinc-300">Figma</p>
-          </div>
-        </div>
-      </section>
     </div>
 
-    <!-- PORTFOLIO-->
+    <!-- PORTFOLIO -->
     <div id="portfolio" class="hidden my-2 transition-all duration-500 ease-out opacity-0 translate-y-5">
-      <p class="text-2xl font-bold flex justify-center my-10">Portfolio</p>
+      <p class="text-2xl font-bold flex justify-center my-10 text-gray-900 dark:text-white">Portfolio</p>
       <div class="grid grid-cols-3 md:grid-cols-6 gap-3 my-10">
-        <button id="allbtn" class="py-3 px-1 border border-gray-100 text-gray-400 rounded-lg font-bold text-sm">All</button>
-        <button id="websitebtn" class="py-3 px-1 border border-gray-100 text-gray-400 rounded-lg font-bold text-sm">Websites</button>
-        <button id="app-desktopbtn" class="py-3 px-1 border border-gray-100 text-gray-400 rounded-lg font-bold text-sm">App Desktop</button>
-        <button id="landing-pages" class="py-3 px-1 border border-gray-100 text-gray-400 rounded-lg font-bold text-sm">Landing Pages</button>
-        <button id="reactbtn" class="py-3 px-1 border border-gray-100 text-gray-400 rounded-lg font-bold text-sm">React Apps</button>
-        <button id="uibtn" class="py-3 px-1 border border-gray-100 text-gray-400 rounded-lg font-bold text-sm">UI Components</button>
+        <button id="allbtn" class="py-3 px-1 border-gray-300 dark:border-gray-800 text-gray-600 dark:text-gray-400 rounded-lg font-bold text-sm">All</button>
+        <button id="websitebtn" class="py-3 px-1 border-gray-300 dark:border-gray-800 text-gray-600 dark:text-gray-400 rounded-lg font-bold text-sm">Websites</button>
+        <button id="app-desktopbtn" class="py-3 px-1 border-gray-300 dark:border-gray-800 text-gray-600 dark:text-gray-400 rounded-lg font-bold text-sm">App Desktop</button>
+        <button id="landing-pages" class="py-3 px-1 border-gray-300 dark:border-gray-800 text-gray-600 dark:text-gray-400 rounded-lg font-bold text-sm">Landing Pages</button>
+        <button id="reactbtn" class="py-3 px-1 border-gray-300 dark:border-gray-800 text-gray-600 dark:text-gray-400 rounded-lg font-bold text-sm">React Apps</button>
+        <button id="uibtn" class="py-3 px-1 border-gray-300 dark:border-gray-800 text-gray-600 dark:text-gray-400 rounded-lg font-bold text-sm">UI Components</button>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="h-48 bg-gray-800 rounded-xl desktop transition-all duration-300"></div>
-        <div class="h-48 bg-gray-800 rounded-xl react transition-all duration-300"></div>
-        <div class="h-48 bg-gray-800 rounded-xl landing transition-all duration-300"></div>
-        <div class="h-48 bg-gray-800 rounded-xl ecommerce transition-all duration-300"></div>
-        <div class="h-48 bg-gray-800 rounded-xl desktop transition-all duration-300"></div>
-        <div class="h-48 bg-gray-800 rounded-xl react transition-all duration-300"></div>
+        <div class="h-48 bg-gray-100 dark:bg-gray-800 rounded-xl desktop flex items-center justify-center text-gray-400 transition-colors duration-300">Desktop App 1</div>
+        <div class="h-48 bg-gray-100 dark:bg-gray-800 rounded-xl react flex items-center justify-center text-gray-400 transition-colors duration-300">React App 1</div>
+        <div class="h-48 bg-gray-100 dark:bg-gray-800 rounded-xl landing flex items-center justify-center text-gray-400 transition-colors duration-300">Landing Page 1</div>
+        <div class="h-48 bg-gray-100 dark:bg-gray-800 rounded-xl ecommerce flex items-center justify-center text-gray-400 transition-colors duration-300">E-commerce</div>
+        <div class="h-48 bg-gray-100 dark:bg-gray-800 rounded-xl desktop flex items-center justify-center text-gray-400 transition-colors duration-300">Desktop App 2</div>
+        <div class="h-48 bg-gray-100 dark:bg-gray-800 rounded-xl react flex items-center justify-center text-gray-400 transition-colors duration-300">React App 2</div>
       </div>
     </div>
 
-   
-<!-- CONTACT ME SECTION--><!-- CONTACT ME SECTION-->
-<div id="contact" class="hidden my-2 transition-all duration-500 ease-out opacity-0 translate-y-5">
-  <div class="flex justify-center items-center flex-col gap-2">
-    <p class="text-2xl font-bold md:pb-4">Contact Me</p>
-    <p class="text-xl text-center pb-8">Cultivating Connections: Reach Out And Connect With Me</p>
-  </div>
+    <!-- CONTACT -->
+    <div id="contact" class="hidden my-2 transition-all duration-500 ease-out opacity-0 translate-y-5">
+      <div class="flex justify-center items-center flex-col gap-2">
+        <p class="text-2xl font-bold md:pb-4 text-gray-900 dark:text-white">Contact Me</p>
+        <p class="text-xl text-center pb-8 text-gray-600 dark:text-gray-300">Cultivating Connections: Reach Out And Connect With Me</p>
+      </div>
+      <form action="https://formsubmit.co/wolesamuel001@gmail.com" method="POST" class="md:grid md:grid-cols-2 md:gap-8 max-w-xl mx-auto p-8 rounded-2xl bg-gray-100 dark:bg-gray-800 transition-colors duration-300">
+        <input type="hidden" name="_subject" value="New Portfolio Inquiry!">
+        <input type="hidden" name="_next" value="https://wolesamuel.github.io/portfolio/thanks.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" style="display:none">
 
-  <form action="https://formsubmit.co/wolesamuel001@gmail.com" method="POST" class="md:grid md:grid-cols-2 md:gap-8 max-w-xl mx-auto p-8 rounded-2xl bg-gray-800">
-    
-    <!-- FormSubmit settings -->
-    <input type="hidden" name="_subject" value="New Portfolio Inquiry!">
-    <input type="hidden" name="_next" value="https://wolesamuel.github.io/portfolio/thanks.html">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="_honey" style="display:none">
-    
-    <div>
-      <label for="fullName" class="block text-sm text-zinc-300 mb-1">Full Name</label>
-      <input type="text" id="fullName" name="name" placeholder="John Doe" required class="w-full px-4 py-3 rounded-lg bg-gray-900 text-white border-zinc-700 focus:border-orange-500 focus:outline-none"/>
+        <div>
+          <label for="fullName" class="block text-sm text-gray-700 dark:text-zinc-300 mb-1">Full Name</label>
+          <input type="text" id="fullName" name="name" placeholder="John Doe" required class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-zinc-700 focus:border-orange-500 focus:outline-none transition-colors duration-300"/>
+        </div>
+        <div>
+          <label for="email" class="block text-sm text-gray-700 dark:text-zinc-300 mb-1">Email</label>
+          <input type="email" id="email" name="email" placeholder="john@email.com" required class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-zinc-700 focus:border-orange-500 focus:outline-none transition-colors duration-300"/>
+        </div>
+        <div>
+          <label for="phone" class="block text-sm text-gray-700 dark:text-zinc-300 mb-1">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 800 000 0000" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-zinc-700 focus:border-orange-500 focus:outline-none transition-colors duration-300"/>
+        </div>
+        <div>
+          <label for="service" class="block text-sm text-gray-700 dark:text-zinc-300 mb-1">Service of Interest</label>
+          <select id="select-service-btn" name="service" required class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-gray-700 focus:border-orange-500 focus:outline-none transition-colors duration-300">
+            <option value="">Select a service...</option>
+            <option value="websites">Websites</option>
+            <option value="landing-pages">Landing Pages</option>
+            <option value="react-apps">React Apps</option>
+            <option value="ui-components">UI Components</option>
+            <option value="others">Others</option>
+          </select>
+        </div>
+        <div>
+          <label for="timeline" class="block text-sm text-gray-700 dark:text-zinc-300 mb-1">Timeline</label>
+          <input type="text" id="timeline" name="timeline" placeholder="e.g. 2 weeks" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-zinc-700 focus:border-orange-500 focus:outline-none transition-colors duration-300"/>
+        </div>
+        <div class="md:col-span-2">
+          <label for="details" class="block text-sm text-gray-700 dark:text-zinc-300 mb-1">Project Details</label>
+          <textarea id="details" name="message" rows="4" placeholder="Tell me about your project..." class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white border-gray-300 dark:border-zinc-700 focus:border-orange-500 focus:outline-none resize-none transition-colors duration-300"></textarea>
+        </div>
+        <div class="md:col-span-2 flex justify-center items-center">
+          <button id="form-submitbtn" type="submit" class="px-8 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold text-lg transition hover:scale-105">
+            Send Message
+          </button>
+        </div>
+      </form>
     </div>
 
-    <div>
-      <label for="email" class="block text-sm text-zinc-300 mb-1">Email</label>
-      <input type="email" id="email" name="email" placeholder="john@email.com" required class="w-full px-4 py-3 rounded-lg bg-gray-900 text-white border-zinc-700 focus:border-orange-500 focus:outline-none"/>
+    <!-- MARQUEE -->
+    <div class="relative overflow-hidden py-2 mt-14 bg-gradient-to-r from-gray-100 via-white to-gray-100 dark:from-gray-900 dark:via-black dark:to-gray-900 transition-colors duration-300">
+      <div class="absolute top-0 left-0 w-full h-[1px] animate-[border-pulse_4s_ease-in-out_infinite] bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500"></div>
+      <div class="absolute bottom-0 left-0 w-full h-[1px] animate-[border-pulse_4s_ease-in-out_infinite] bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500"></div>
+      <div class="flex w-max animate-[marquee_35s_linear_infinite]">
+        <div class="flex items-center gap-8 text-lg font-semibold tracking-[0.2em] px-8 shrink-0">
+          <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">FRONTEND DEVELOPER • REACT • TAILWIND • TYPESCRIPT • AVAILABLE FOR HIRE •</span>
+          <i class="fa-solid fa-atom text-pink-400 text-2xl animate-[spin-slow_6s_linear_infinite]"></i>
+        </div>
+        <div class="flex items-center gap-8 text-lg font-semibold tracking-[0.2em] px-8 shrink-0">
+          <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">FRONTEND DEVELOPER • REACT • TAILWIND • TYPESCRIPT • AVAILABLE FOR HIRE •</span>
+          <i class="fa-solid fa-atom text-pink-400 text-2xl animate-[spin-slow_6s_linear_infinite]"></i>
+        </div>
+        <div class="flex items-center gap-8 text-lg font-semibold tracking-[0.2em] px-8 shrink-0">
+          <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">FRONTEND DEVELOPER • REACT • TAILWIND • TYPESCRIPT • AVAILABLE FOR HIRE •</span>
+          <i class="fa-solid fa-atom text-pink-400 text-2xl animate-[spin-slow_6s_linear_infinite]"></i>
+        </div>
+        <div class="flex items-center gap-8 text-lg font-semibold tracking-[0.2em] px-8 shrink-0">
+          <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">FRONTEND DEVELOPER • REACT • TAILWIND • TYPESCRIPT • AVAILABLE FOR HIRE •</span>
+          <i class="fa-solid fa-atom text-pink-400 text-2xl animate-[spin-slow_6s_linear_infinite]"></i>
+        </div>
+      </div>
     </div>
 
-    <div>
-      <label for="phone" class="block text-sm text-zinc-300 mb-1">Phone Number</label>
-      <input type="tel" id="phone" name="phone" placeholder="+1 800 000 0000" class="w-full px-4 py-3 rounded-lg bg-gray-900 text-white border-zinc-700 focus:border-orange-500 focus:outline-none"/>
-    </div>
+    <style>
+      @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-25%); } }
+      @keyframes spin-slow { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      @keyframes border-pulse { 0%, 100% { background: linear-gradient(90deg, #22d3ee, #a855f7, #ec4899); } 50% { background: linear-gradient(90deg, #ec4899, #22d3ee, #a855f7); } }
+    </style>
 
-    <div>
-      <label for="service" class="block text-sm text-zinc-300 mb-1">Service of Interest</label>
-      <select id="select-service-btn" name="service" required class="w-full px-4 py-3 rounded-lg bg-gray-900 text-white border-gray-700 focus:border-orange-500 focus:outline-none">
-        <option value="">Select a service...</option>
-        <option value="websites">Websites</option>
-        <option value="landing-pages">Landing Pages</option>
-        <option value="react-apps">React Apps</option>
-        <option value="ui-components">UI Components</option>
-        <option value="others">Others</option>
-      </select>
-    </div>
-
-    <div>
-      <label for="timeline" class="block text-sm text-zinc-300 mb-1">Timeline</label>
-      <input type="text" id="timeline" name="timeline" placeholder="e.g. 2 weeks" class="w-full px-4 py-3 rounded-lg bg-gray-900 text-white border-zinc-700 focus:border-orange-500 focus:outline-none"/>
-    </div>
-
-    <div class="md:col-span-2">
-      <label for="details" class="block text-sm text-zinc-300 mb-1">Project Details</label>
-      <textarea id="details" name="message" rows="4" placeholder="Tell me about your project..." class="w-full px-4 py-3 rounded-lg bg-gray-900 text-white border-zinc-700 focus:border-orange-500 focus:outline-none resize-none"></textarea>
-    </div>
-
-    <div class="md:col-span-2 flex justify-center items-center">
-      <button id="form-submitbtn" type="submit" class="px-8 py-3 rounded-lg bg-gradient-to-r from-purple-600 to-pink-500 text-white font-bold text-lg transition hover:scale-105">
-        Send Message
-      </button>
-    </div>
-  </form>
-</div>
-</div>
-
-                                      <!--INFINITE MARQUEE ANIMATION-->
-<div class="relative overflow-hidden py-2 mt-14 bg-gradient-to-r from-gray-900 via-black to-gray-900">
-
-  <!-- Top border only -->
-  <div class="absolute top-0 left-0 w-full h-[1px] animate-[border-pulse_4s_ease-in-out_infinite] bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500"></div>
-
-  <!-- Bottom border only -->
-  <div class="absolute bottom-0 left-0 w-full h-[1px] animate-[border-pulse_4s_ease-in-out_infinite] bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500"></div>
-
-  <!-- Marquee content - 4 copies -->
-  <div class="flex w-max animate-[marquee_35s_linear_infinite]">
-
-    <div class="flex items-center gap-8 text-lg font-semibold tracking-[0.2em] px-8 shrink-0">
-      <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">
-        FRONTEND DEVELOPER • REACT • TAILWIND • TYPESCRIPT • AVAILABLE FOR HIRE •
-      </span>
-      <i class="fa-solid fa-atom text-pink-400 text-2xl animate-[spin-slow_6s_linear_infinite] drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]"></i>
-    </div>
-
-    <!-- Copy 2, 3, 4 same as before -->
-    <div class="flex items-center gap-8 text-lg font-semibold tracking-[0.2em] px-8 shrink-0">
-      <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">
-        FRONTEND DEVELOPER • REACT • TAILWIND • TYPESCRIPT • AVAILABLE FOR HIRE •
-      </span>
-      <i class="fa-solid fa-atom text-pink-400 text-2xl animate-[spin-slow_6s_linear_infinite] drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]"></i>
-    </div>
-
-    <div class="flex items-center gap-8 text-lg font-semibold tracking-[0.2em] px-8 shrink-0">
-      <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">
-        FRONTEND DEVELOPER • REACT • TAILWIND • TYPESCRIPT • AVAILABLE FOR HIRE •
-      </span>
-      <i class="fa-solid fa-atom text-pink-400 text-2xl animate-[spin-slow_6s_linear_infinite] drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]"></i>
-    </div>
-
-    <div class="flex items-center gap-8 text-lg font-semibold tracking-[0.2em] px-8 shrink-0">
-      <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent whitespace-nowrap">
-        FRONTEND DEVELOPER • REACT • TAILWIND • TYPESCRIPT • AVAILABLE FOR HIRE •
-      </span>
-      <i class="fa-solid fa-atom text-pink-400 text-2xl animate-[spin-slow_6s_linear_infinite] drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]"></i>
-    </div>
-  </div>
-</div>
-
-<style>
-@keyframes marquee {
- 0% { transform: translateX(0); }
- 100% { transform: translateX(-25%); }
-}
-@keyframes spin-slow {
- 0% { transform: rotate(0deg); }
- 100% { transform: rotate(360deg); }
-}
-@keyframes border-pulse {
- 0%, 100% { background: linear-gradient(90deg, #22d3ee, #a855f7, #ec4899); }
- 50% { background: linear-gradient(90deg, #ec4899, #22d3ee, #a855f7); }
-}
-</style>
-
-    <!-- FOOTER-->
-    <footer class="mb-8 p-2 my-8 border-t border-gray-800 space-y-10 transition-all duration-500 ease-out opacity-0 translate-y-5">
+    <!-- FOOTER -->
+    <footer class="mb-8 p-2 my-8 border-t border-gray-200 dark:border-gray-800 space-y-10 transition-all duration-500 ease-out opacity-0 translate-y-5">
       <div class="flex justify-center text-4xl font-bold text-orange-500">LOGO</div>
       <nav class="flex gap-3 flex-wrap justify-center">
-        <a href="index.html" class="text-xl text-gray-400 font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Home</a>
-        <a href="#services" class="text-xl text-gray-400 font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Services</a>
-        <a href="#about" class="text-xl text-gray-400 font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">About me</a>
-        <a href="#portfolio" class="text-xl text-gray-400 font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Portfolio</a>
-        <a href="#contact" class="text-xl text-gray-400 font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Contact me</a>
+        <a href="index.html" class="text-xl font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Home</a>
+        <a href="#services" class="text-xl font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Services</a>
+        <a href="#about" class="text-xl font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">About me</a>
+        <a href="#portfolio" class="text-xl font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Portfolio</a>
+        <a href="#contact" class="text-xl font-semibold hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-500 hover:text-transparent hover:bg-clip-text transition-all">Contact me</a>
       </nav>
-
       <div class="flex gap-8 justify-center text-2xl mb-8 p-2 my-10">
-        <a href="https://github.com/wolesamuel" target="_blank" class="bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 border-gray-700 p-2 rounded-full transition-all">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="http://www.linkedin.com/in/wolesamuel" target="_blank" class="bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 border-gray-700 p-2 rounded-full transition-all">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="mailto:wolesamuel001@gmail.com" class="bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 border-gray-700 p-2 rounded-full transition-all">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-        <a href="https://www.instagram.com/wolesamuel4" target="_blank" class="bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 border-gray-700 p-2 rounded-full transition-all">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
+        <a href="https://github.com/wolesamuel" target="_blank" class="bg-gray-200 dark:bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 p-2 rounded-full transition-all"><i class="fa-brands fa-github text-gray-900 dark:text-white"></i></a>
+        <a href="http://www.linkedin.com/in/wolesamuel" target="_blank" class="bg-gray-200 dark:bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 p-2 rounded-full transition-all"><i class="fa-brands fa-linkedin text-gray-900 dark:text-white"></i></a>
+        <a href="mailto:wolesamuel001@gmail.com" class="bg-gray-200 dark:bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 p-2 rounded-full transition-all"><i class="fa-solid fa-envelope text-gray-900 dark:text-white"></i></a>
+        <a href="https://www.instagram.com/wolesamuel4" target="_blank" class="bg-gray-200 dark:bg-gray-700 hover:bg-gradient-to-r from-purple-600 to-pink-500 p-2 rounded-full transition-all"><i class="fa-brands fa-instagram text-gray-900 dark:text-white"></i></a>
       </div>
     </footer>
 
   </section>
-
-  <script>
-const btn = document.getElementById('theme-toggle');
-const html = document.documentElement;
-
-// Check saved theme
-if(localStorage.getItem('theme') === 'light') {
-  html.classList.remove('dark');
-  btn.textContent = '🌙';
-} else {
-  html.classList.add('dark');
-  btn.textContent = '☀️';
-}
-
-btn.addEventListener('click', () => {
-  html.classList.toggle('dark');
-  if(html.classList.contains('dark')) {
-    localStorage.setItem('theme', 'dark');
-    btn.textContent = '☀️';
-  } else {
-    localStorage.setItem('theme', 'light');
-    btn.textContent = '🌙';
-  }
-});
-</script>
 
   <script src="portfolio.js"></script>
 </body>
